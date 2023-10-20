@@ -9,7 +9,7 @@ if (!function_exists('env')) {
      */
     function env(string $key): string|null
     {
-        $pathProject = getcwd();
+        $pathProject = dirname(getcwd());
         $formattedKey = strtolower($key);
 
         $file = "{$pathProject}/src/.env";
@@ -34,13 +34,13 @@ if (!function_exists('config')) {
      */
     function config(string $key): string|array|null
     {
-        $pathProject = getcwd();
+        $pathProject = dirname(getcwd());
         $keys = explode('.', $key);
 
         $file = "{$pathProject}/src/config/{$keys[0]}.php";
 
         if (file_exists($file)) {
-            $configFile = include_once $file;
+            $configFile = include $file;
             unset($keys[0]);
 
             foreach ($keys as $key) {

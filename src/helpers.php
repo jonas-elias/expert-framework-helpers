@@ -12,7 +12,7 @@ if (!function_exists('env')) {
         $pathProject = dirname(getcwd());
         $formattedKey = strtolower($key);
 
-        $file = "{$pathProject}/src/.env";
+        $file = "{$pathProject}/.env";
 
         if (file_exists($file)) {
             $envFile = parse_ini_file($file);
@@ -37,7 +37,7 @@ if (!function_exists('config')) {
         $pathProject = dirname(getcwd());
         $keys = explode('.', $key);
 
-        $file = "{$pathProject}/src/config/{$keys[0]}.php";
+        $file = "{$pathProject}/config/{$keys[0]}.php";
 
         if (file_exists($file)) {
             $configFile = include $file;

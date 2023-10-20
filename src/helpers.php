@@ -5,9 +5,9 @@ if (!function_exists('env')) {
      * Get env param by key
      *
      * @param string
-     * @return string
+     * @return string|null
      */
-    function env(string $key): string
+    function env(string $key): string|null
     {
         $pathProject = getcwd();
         $formattedKey = strtolower($key);

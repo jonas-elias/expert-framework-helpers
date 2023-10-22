@@ -47,7 +47,7 @@ if (!function_exists('config')) {
                 $value = $configFile[$key] ?? null;
             }
 
-            if ($value) {
+            if (isset($value)) {
                 return $value;
             }
 

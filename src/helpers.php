@@ -57,3 +57,29 @@ if (!function_exists('config')) {
         return null;
     }
 }
+
+if (!function_exists('render')) {
+    /**
+     * Render html string
+     *
+     * @param string
+     * @return string|array|null
+     */
+    function render(string $key): string|null
+    {
+        $pathProject = dirname(getcwd());
+
+        $key = str_replace('.', '/', $key);
+
+        $file = "{$pathProject}/app/View/{$key}.phtml";
+
+        if (file_exists($file)) {
+            $htmlFile = file_get_contents($file);
+
+            echo $htmlFile;
+            return $htmlFile;
+        }
+
+        return null;
+    }
+}

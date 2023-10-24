@@ -44,11 +44,7 @@ if (!function_exists('config')) {
             unset($keys[0]);
 
             foreach ($keys as $key) {
-                $value = $configFile[$key] ?? null;
-            }
-
-            if (isset($value)) {
-                return $value;
+                $configFile = $configFile[$key] ?? null;
             }
 
             return $configFile;

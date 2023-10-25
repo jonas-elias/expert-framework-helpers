@@ -2,9 +2,10 @@
 
 if (!function_exists('env')) {
     /**
-     * Get env param by key
+     * Get env param by key.
      *
      * @param string
+     *
      * @return string|null
      */
     function env(string $key): string|null
@@ -27,9 +28,10 @@ if (!function_exists('env')) {
 
 if (!function_exists('config')) {
     /**
-     * Get config param by key
+     * Get config param by key.
      *
      * @param string
+     *
      * @return string|array|null
      */
     function config(string $key): string|array|null
@@ -56,9 +58,10 @@ if (!function_exists('config')) {
 
 if (!function_exists('render')) {
     /**
-     * Render html string
+     * Render html string.
      *
      * @param string
+     *
      * @return string|array|null
      */
     function render(string $key): string|null
@@ -73,6 +76,7 @@ if (!function_exists('render')) {
             $htmlFile = file_get_contents($file);
 
             echo $htmlFile;
+
             return $htmlFile;
         }
 

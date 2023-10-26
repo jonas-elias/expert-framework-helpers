@@ -20,11 +20,11 @@ A função `env()` permite que você recupere variáveis de ambiente de um arqui
 
 Exemplo de uso:
 
-php
+```php
 require_once __DIR__.'/../../vendor/expert-framework/helpers/src/helpers.php';
 
 $apiKey = env('API_KEY');
-
+```
 
 ### 2. config()
 
@@ -32,11 +32,11 @@ A função `config()` é usada para acessar parâmetros de configuração armaze
 
 Exemplo de uso:
 
-php
+```php
 require_once __DIR__.'/../../vendor/expert-framework/helpers/src/helpers.php';
 
 $nome = config('app.nome');
-
+```
 
 ### 3. render()
 
@@ -44,11 +44,11 @@ A função `render()` simplifica a renderização de conteúdo HTML. Ela carrega
 
 Exemplo de uso:
 
-php
+```php
 require_once __DIR__.'/../../vendor/expert-framework/helpers/src/helpers.php';
 
 $documentacaoHtml = render('docs');
-
+```
 
 ## Dúvidas 🤔
 Caso exista alguma dúvida sobre como instalar, utilizar ou gerenciar o projeto, entre em contato com o email: jonasdasilvaelias@gmail.com

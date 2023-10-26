@@ -8,9 +8,9 @@ Componente pertencente ao framework *Jonaselias\ExpertFramework* https://github.
 
 Você pode instalar este pacote via Composer:
 
-bash
+```bash
 composer require expert-framework/helpers
-
+```
 
 ## Uso ✅
 
